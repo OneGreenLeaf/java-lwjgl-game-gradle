@@ -174,7 +174,7 @@ public class Window {
                 glfwSetWindowShouldClose(glfwWindow, true);
             }
 
-            this.imguiLayer.update(dt);
+            this.imguiLayer.update(dt, currentScene);
             glfwSwapBuffers(glfwWindow);
 
             endTime =(float)glfwGetTime();
