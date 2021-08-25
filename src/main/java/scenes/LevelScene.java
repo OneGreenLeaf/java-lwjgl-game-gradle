@@ -1,4 +1,7 @@
-package gerta;
+package scenes;
+
+import gerta.Window;
+import scenes.Scene;
 
 public class LevelScene extends Scene {
     public  LevelScene(){

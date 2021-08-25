@@ -1,9 +1,11 @@
 package gerta;
 
-import imgui.ImGui;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
+import scenes.LevelEditorScene;
+import scenes.LevelScene;
+import scenes.Scene;
 
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
@@ -24,7 +26,7 @@ public class Window {
 
     private static Window window;
 
-    private static  Scene currentScene;
+    private static Scene currentScene;
 
     static {
         window = null;

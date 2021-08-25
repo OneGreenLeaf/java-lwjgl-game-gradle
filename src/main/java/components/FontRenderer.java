@@ -1,7 +1,5 @@
 package components;
 
-import gerta.Component;
-
 public class FontRenderer extends Component {
 
 

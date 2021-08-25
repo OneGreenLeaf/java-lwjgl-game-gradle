@@ -1,6 +1,5 @@
 package components;
 
-import gerta.Component;
 import gerta.Transform;
 import imgui.ImGui;
 import org.joml.Vector2f;
