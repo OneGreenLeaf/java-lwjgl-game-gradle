@@ -162,8 +162,8 @@ public class ImGuiLayer {
         fontConfig.setGlyphRanges(fontAtlas.getGlyphRangesDefault());
 
         // Fonts merge example
-        fontConfig.setPixelSnapH(true);
-        fontAtlas.addFontFromFileTTF("assets/fonts/segoeui.ttf", 16, fontConfig);
+        fontConfig.setPixelSnapH(false);
+        fontAtlas.addFontFromFileTTF("assets/fonts/segoeui.ttf", 13, fontConfig);
 
         fontConfig.destroy(); // After all fonts were added we don't need this config more
 
