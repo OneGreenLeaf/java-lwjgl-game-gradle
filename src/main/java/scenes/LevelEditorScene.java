@@ -7,6 +7,7 @@ import imgui.ImVec2;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
+import org.lwjgl.system.CallbackI;
 import renderer.DebugDraw;
 import scenes.Scene;
 import until.AssetPool;
@@ -34,7 +35,7 @@ public class LevelEditorScene extends Scene {
         this.camera = new Camera(new Vector2f(-250, 0));
         sprites = AssetPool.getSpritesheet("assets/images/spritesheets/decorationsAndBlocks.png");
         //DebugDraw.addLine2D(new Vector2f(0,0), new Vector2f(800, 800), new Vector3f(1,0,0), 120);
-        if(levelLoaded ){
+        if(levelLoaded){
             this.activeGameObject = gameObjects.get(0);
             this.activeGameObject.addComponent(new Rigidbody());
             return;
@@ -72,9 +73,14 @@ public class LevelEditorScene extends Scene {
         AssetPool.getTexture("assets/images/blendImage2.png");
     }
 
+
+    float x , y = 0.0f;
     @Override
     public void update(float dt) {
         levelEditorStuff.update(dt);
+        DebugDraw.addCircle(new Vector2f(x, y), 64, new Vector3f(0, 1,0), 1);
+        x += 50f * dt;
+        y += 50f * dt;
 
         for (GameObject go : this.gameObjects){
             go.update(dt);
